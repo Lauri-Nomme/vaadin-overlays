@@ -16,7 +16,7 @@
 
 package org.vaadin.overlay;
 
-import com.vaadin.shared.ui.label.ContentMode;
+import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Label;
 
@@ -36,10 +36,8 @@ public class TextOverlay extends CustomClickableOverlay {
 
     public static final ContentMode CONTENT_DEFAULT = ContentMode.TEXT;
     public static final ContentMode CONTENT_PREFORMATTED = ContentMode.PREFORMATTED;
-    public static final ContentMode CONTENT_RAW = ContentMode.RAW;
     public static final ContentMode CONTENT_TEXT = ContentMode.TEXT;
     public static final ContentMode CONTENT_XHTML = ContentMode.HTML;
-    public static final ContentMode CONTENT_XML = ContentMode.XML;
 
     private String text;
     private Label label;
