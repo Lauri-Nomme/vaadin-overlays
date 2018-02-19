@@ -35,6 +35,7 @@ public class CustomClickableOverlay extends CustomOverlay {
     private CssLayout layout = new CssLayout();
     private Component realOverlay;
     private OverlayClickListener clickListener;
+    public String foobar = "foobar";
 
     public CustomClickableOverlay() {
         layout.addLayoutClickListener(new ClickListener());
@@ -96,7 +97,7 @@ public class CustomClickableOverlay extends CustomOverlay {
 
         public void layoutClick(LayoutClickEvent event) {
             if (clickListener != null) {
-                clickListener.overlayClicked(CustomClickableOverlay.this);
+                clickListener.overlayClicked(event, CustomClickableOverlay.this);
             }
         }
     }

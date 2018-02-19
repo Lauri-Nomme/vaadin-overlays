@@ -16,6 +16,7 @@
 
 package org.vaadin.overlay.sample;
 
+import com.vaadin.event.LayoutEvents;
 import com.vaadin.server.ClassResource;
 import com.vaadin.server.Resource;
 import com.vaadin.server.VaadinRequest;
@@ -49,7 +50,7 @@ public class OverlaySampleApplication extends UI {
             io.setComponentAnchor(Alignment.TOP_LEFT); // Top left of the button
             io.setOverlayAnchor(Alignment.MIDDLE_CENTER); // Center of the image
             io.setClickListener(new OverlayClickListener() {
-                public void overlayClicked(CustomClickableOverlay overlay) {
+                public void overlayClicked(LayoutEvents.LayoutClickEvent event, CustomClickableOverlay overlay) {
                     Notification.show("ImageOverlay Clicked!");
                 }
             });
@@ -60,7 +61,7 @@ public class OverlaySampleApplication extends UI {
             to.setComponentAnchor(Alignment.MIDDLE_RIGHT); // Top right of the button
             to.setOverlayAnchor(Alignment.MIDDLE_CENTER); // Center of the image
             to.setClickListener(new OverlayClickListener() {
-                public void overlayClicked(CustomClickableOverlay overlay) {
+                public void overlayClicked(LayoutEvents.LayoutClickEvent event, CustomClickableOverlay overlay) {
                     Notification.show("TextOverlay Clicked!");
                 }
             });

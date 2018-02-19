@@ -16,6 +16,8 @@
 
 package org.vaadin.overlay;
 
+import com.vaadin.event.LayoutEvents;
+
 /**
  * Interface for receiving click events on Overlay.
  * <p/>
@@ -26,6 +28,6 @@ package org.vaadin.overlay;
  */
 public interface OverlayClickListener {
 
-    public void overlayClicked(CustomClickableOverlay overlay);
+    public void overlayClicked(LayoutEvents.LayoutClickEvent event, CustomClickableOverlay overlay);
 
 }
